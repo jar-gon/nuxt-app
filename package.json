@@ -1,0 +1,54 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "packageManager": "yarn@1.22.22",
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+  },
+  "scripts": {
+    "build": "nuxt build --dotenv .env.production",
+    "dev": "nuxt dev --dotenv .env.development",
+    "format": "prettier --write . && yarn lint:fix && prettier --write .",
+    "format:check": "prettier --check . && yarn lint",
+    "generate": "nuxt generate",
+    "lint": "yarn lint:eslint && yarn lint:style",
+    "lint:eslint": "eslint . --max-warnings=0",
+    "lint:fix": "eslint . --fix --max-warnings=0 && yarn lint:style:fix",
+    "lint:style": "stylelint \"src/**/*.{css,styl,stylus,vue}\"",
+    "lint:style:fix": "stylelint \"src/**/*.{css,styl,stylus,vue}\" --fix",
+    "lint-staged": "lint-staged",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare && husky",
+    "test:tooling": "nuxt prepare && node --test scripts/tooling.test.mjs",
+    "typecheck": "nuxt prepare && vue-tsc -b --noEmit"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.17.0",
+    "@vant/nuxt": "^1.0.7",
+    "autoprefixer": "^10.6.1",
+    "eslint": "^10.11.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "nuxt": "^4.5.2",
+    "nuxt-mongoose": "^1.1.2",
+    "postcss": "^8.5.28",
+    "postcss-px-to-viewport-8-plugin": "^1.2.5",
+    "prettier": "^3.9.9",
+    "stylelint": "^16.26.1",
+    "stylelint-config-recess-order": "^7.8.0",
+    "stylelint-config-standard": "^39.0.0",
+    "stylelint-order": "^8.1.1",
+    "stylelint-stylus": "^1.0.0",
+    "stylus": "^0.64.0",
+    "typescript": "6.0.3",
+    "vant": "^4.10.2",
+    "vue": "^3.5.43",
+    "vue-router": "^5.3.1",
+    "vue-tsc": "^3.3.11"
+  },
+  "browserslist": [
+    "iOS >= 15",
+    "last 2 ChromeAndroid versions"
+  ]
+}
