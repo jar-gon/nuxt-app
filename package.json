@@ -1,0 +1,23 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build --dotenv .env.production",
+    "dev": "nuxt dev --dotenv .env.development",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "1.0.6",
+    "@vant/nuxt": "^1.0.4",
+    "nuxt": "^3.8.2",
+    "nuxt-mongoose": "^1.0.3",
+    "postcss-px-to-viewport-8-plugin": "^1.2.3",
+    "stylus": "^0.62.0",
+    "vant": "^4.8.0",
+    "vue": "^3.3.11",
+    "vue-router": "^4.2.5"
+  }
+}
